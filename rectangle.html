@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>rectangle</title>
+<link href="./rectangle.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<div class="main">
+<div>宽度：<input id="idw" type="text" οnkeydοwn="onlyNum();" autofocus><span>*</span><br/></div>
+<div>高度：<input id="idh" type="text" οnkeydοwn="onlyNum();"><span>*</span><br/></div>
+<div><button id="btn">计算</button></div>
+<div>周长：<input id="idc" type="text" disabled="disabled"></div>
+<div>面积：<input id="ids" type="text" disabled="disabled"></div>
+</div>
+<script>
+function calculate(id) {
+return document.getElementById(id);
+}
+calculate('btn').onclick=function() {
+var width=parseFloat(calculate('idw').value);
+var height=parseFloat(calculate('idh').value);
+if(!width||!height){
+alert('数据不能为空且必须填写合法数据')
+}else{
+if(width<=0||height<=0){
+return alert('数据不能小于或等于零')
+}if(isNaN(+width)){
+return alert('输入的数据不合法')
+}}
+var area=Math.floor(width*1000)/1000*Math.floor(height*1000)/1000;
+var circumference=Math.floor(width*1000)/1000*2+Math.floor(height*1000)/1000*2
+calculate('idc').value=circumference;
+calculate('ids').value=area;
+}
+</script>
+<div  class="div1"></div>
+<div  class="div2"></div>
+<div  class="div3">
+<a href="https://github.com/readysun/rectangle" target="_blank">
+<p class="message">Fork me on Github</p></a></div>
+</body>
+</html>
