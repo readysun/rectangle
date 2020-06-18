@@ -23,8 +23,8 @@ var height=parseFloat(calculate('idh').value);
 if(!width||!height){
 alert('数据不能为空且必须填写合法数据')
 }else{
-if(width<=0||height<=0){
-return alert('数据不能小于或等于零')
+if(width<0||height<0){
+return alert('数据不能小于零')
 }}
 var area=Math.floor(width*1000)/1000*Math.floor(height*1000)/1000;
 var circumference=Math.floor(width*1000)/1000*2+Math.floor(height*1000)/1000*2
