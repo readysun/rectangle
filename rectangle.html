@@ -26,7 +26,7 @@ if(width<0||height<0){
 return alert('数据不能小于零')
 }}
 var area=Math.floor(width*100000)/100000*Math.floor(height*100000)/100000;
-var circumference=Math.floor(width*100000)/100000*2+Math.floor(height*100000)/100000*2
+var circumference=2*(Math.floor(width*100000)+Math.floor(height*100000))/100000
 calculate('idc').value=circumference;
 calculate('ids').value=area;
 }
